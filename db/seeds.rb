@@ -37,3 +37,6 @@ User.delete_all
   User.create(login: "user#{i}", email: "user#{i}@hooli.xyz")
 end
 User.create(login: 'admin', email: 'admin@gmail.com')
+
+PassedTest.create(test_id: 4, user_id: 4)
+PassedTest.create(test_id: 1, user_id: 4)
