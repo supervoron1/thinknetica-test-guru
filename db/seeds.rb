@@ -14,10 +14,10 @@ categories = Category.create([{title: :Ruby}, {title: :Rails}, {title: :JS}, {ti
 
 Test.delete_all
 tests = Test.create([
-                      { title: 'Ruby intermediate', level: 2, category_id: categories[0].id },
-                      { title: 'Rails basics', level: 1, category_id: categories[1].id },
-                      { title: 'JS basics', level: 1, category_id: categories[2].id },
-                      { title: 'HTML advanced', level: 3, category_id: categories[3].id }
+                      { title: 'Ruby intermediate', level: 2, category_id: categories[0].id, author_id: 4 },
+                      { title: 'Rails basics', level: 1, category_id: categories[1].id, author_id: 4 },
+                      { title: 'JS basics', level: 1, category_id: categories[2].id, author_id: 4 },
+                      { title: 'HTML advanced', level: 3, category_id: categories[3].id, author_id: 4 }
                     ])
 
 Question.delete_all
