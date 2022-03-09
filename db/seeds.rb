@@ -12,12 +12,18 @@ Category.delete_all
 # alternative
 categories = Category.create([{title: :Ruby}, {title: :Rails}, {title: :JS}, {title: :HTML}])
 
+User.delete_all
+3.times do |i|
+  User.create(login: "user#{i}", email: "user#{i}@hooli.xyz")
+end
+User.create(login: 'admin', email: 'admin@gmail.com')
+
 Test.delete_all
 tests = Test.create([
-                      { title: 'Ruby intermediate', level: 2, category_id: categories[0].id },
-                      { title: 'Rails basics', level: 1, category_id: categories[1].id },
-                      { title: 'JS basics', level: 1, category_id: categories[2].id },
-                      { title: 'HTML advanced', level: 3, category_id: categories[3].id }
+                      { title: 'Ruby intermediate', level: 2, category_id: categories[0].id, author_id: 4 },
+                      { title: 'Rails basics', level: 1, category_id: categories[1].id, author_id: 4 },
+                      { title: 'JS basics', level: 1, category_id: categories[2].id, author_id: 4 },
+                      { title: 'HTML advanced', level: 3, category_id: categories[3].id, author_id: 4 }
                     ])
 
 Question.delete_all
@@ -31,12 +37,6 @@ Answer.create(body: 'Sinatra', correct: false, question_id: question[0].id)
 Answer.create(body: 'Ruby on Rails', correct: true, question_id: question[0].id)
 Answer.create(body: 'MVP', correct: false, question_id: question[1].id)
 Answer.create(body: 'MVC', correct: true, question_id: question[1].id)
-
-User.delete_all
-3.times do |i|
-  User.create(login: "user#{i}", email: "user#{i}@hooli.xyz")
-end
-User.create(login: 'admin', email: 'admin@gmail.com')
 
 PassedTest.create(test_id: 4, user_id: 4)
 PassedTest.create(test_id: 1, user_id: 4)
