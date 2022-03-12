@@ -10,6 +10,10 @@ class Test < ApplicationRecord
   scope :advanced, -> { where(level: 5..Float::INFINITY) }
   scope :by_category, -> (category_title) { joins(:category).where(categories: { title: category_title }) }
 
+  # also needs migration to add unique indexes to attributes: title and level
+  validates :title, presence: true, uniqueness: { scope: :level }
+  validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+
   def self.sort_by_category(category_title)
     # Test.joins("JOIN categories ON categories.id = tests.category_id")
     #     .where("categories.title = ?", category).order(title: :desc).pluck(:title)
