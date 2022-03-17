@@ -10,6 +10,15 @@ class QuestionsController < ApplicationController
     render inline: "<%= @question.body %>"
   end
 
+  def create
+    @question = @test.questions.new(question_params)
+    if @question.save
+      redirect_to @question
+    else
+      render :new
+    end
+  end
+
   private
 
   def find_question
@@ -18,5 +27,9 @@ class QuestionsController < ApplicationController
 
   def find_test
     @test = Test.find(params[:test_id])
+  end
+
+  def question_params
+    params.require(:question).permit(:body)
   end
 end
