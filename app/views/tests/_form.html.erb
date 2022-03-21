@@ -1,0 +1,37 @@
+<%= form_with(model: [@test], local: true) do |form| %>
+  <% if @test.errors.present? %>
+    <div>
+      <h2><%= pluralize(@test.errors.count, 'error') %> detected:</h2>
+      <ul>
+        <% @test.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form__item">
+    <%= form.label :title %><br>
+    <%= form.text_field :title, id: :test_title, class: "" %>
+  </div>
+
+  <div class="form__item">
+    <%= form.label :level %><br>
+    <%= form.number_field :level, id: :test_level, class: "form__item-num " %>
+  </div>
+
+  <div class="form__item">
+    <%= form.label :category_id %><br>
+    <%= form.collection_select :category_id, Category.all, :id, :title, { prompt: true }, { class: "form__item-btn" } %>
+  </div>
+
+  <div class="form__item">
+    <%= form.label :author_id %><br>
+    <%= form.collection_select :author_id, User.all, :id, :login, prompt: true, class: "form__item-btn" %>
+  </div><br>
+
+  <div class="form__item">
+    <%= form.submit class: "form__item-btn" %>
+    <%= link_to 'Back', tests_path, class: "" %>
+  </div>
+<% end %>

@@ -9,6 +9,21 @@ class TestsController < ApplicationController
     @test = Test.find(params[:id])
   end
 
+  def edit; end
+
+  def new
+    @test = Test.new
+  end
+
+  def create
+    @test = Test.new(test_params)
+    if @test.save
+      redirect_to root_path
+    else
+      render :new # Just rendering view '/tests/new' using @test (action #new not used)
+    end
+  end
+
   def destroy
     @test.destroy
     redirect_to tests_path
@@ -18,5 +33,9 @@ class TestsController < ApplicationController
 
   def find_test
     @test = Test.find(params[:id])
+  end
+
+  def test_params
+    params.require(:test).permit(:title, :level, :category_id, :author_id)
   end
 end
