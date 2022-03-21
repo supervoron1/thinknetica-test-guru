@@ -1,11 +1,26 @@
 <div>
   <% if @test.questions.any? %>
     <strong>Test questions:</strong>
-    <% @test.questions.each do |question| %>
-      <ul>
-        <li><%= question.body %></li>
-      </ul>
-    <% end %>
+    <table>
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Body</th>
+        <th colspan="3">Action</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @test.questions.each do |question| %>
+        <tr>
+          <td><%= question.id %></td>
+          <td><%= question.body %></td>
+          <td><%= link_to 'Edit', edit_test_question_path(@test, question) %></td>
+          <td><%= link_to 'Destroy', test_question_path(@test, question), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
   <% else %>
     <p>No questions yet</p>
   <% end %>

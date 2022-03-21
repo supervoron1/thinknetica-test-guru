@@ -9,5 +9,6 @@
 </p>
 
 <%= render partial: 'questions/test_questions' %>
-
+<br>
+<%= link_to 'New question', new_test_question_path(@test) %> |
 <%= link_to 'Back to tests', tests_path %>
