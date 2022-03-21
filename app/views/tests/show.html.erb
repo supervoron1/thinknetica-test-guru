@@ -8,17 +8,6 @@
   <%= @test.level %>
 </p>
 
-<div>
-  <% if @test.questions.any? %>
-    <strong>Test questions:</strong>
-    <% @test.questions.each do |question| %>
-      <ul>
-        <li><%= question.body %></li>
-      </ul>
-    <% end %>
-  <% else %>
-    <p>No questions yet</p>
-  <% end %>
-</div>
+<%= render partial: 'questions/test_questions' %>
 
 <%= link_to 'Back to tests', tests_path %>
