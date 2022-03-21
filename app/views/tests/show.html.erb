@@ -1,0 +1,24 @@
+<p>
+  <strong>Title:</strong>
+  <%= @test.title %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @test.level %>
+</p>
+
+<div>
+  <% if @test.questions.any? %>
+    <strong>Test questions:</strong>
+    <% @test.questions.each do |question| %>
+      <ul>
+        <li><%= question.body %></li>
+      </ul>
+    <% end %>
+  <% else %>
+    <p>No questions yet</p>
+  <% end %>
+</div>
+
+<%= link_to 'Back to tests', tests_path %>
