@@ -1,4 +1,4 @@
-<%= form_with(model: [@test, @question], local: true) do |form| %>
+<%= form_with model: model, local: true do |form| %>
   <div>
     <%= form.label :body %><br>
     <%= form.text_area :body %>
@@ -6,6 +6,6 @@
   <br>
   <div>
     <%= form.submit %>
-    <%= link_to 'Back', test_path(@test) %>
+    <%= link_to 'Back', (@test || @question.test) %>
   </div>
 <% end %>

@@ -5,9 +5,7 @@ class TestsController < ApplicationController
     @tests = Test.all
   end
 
-  def show
-    @test = Test.find(params[:id])
-  end
+  def show; end
 
   # New -> Create
   def new
@@ -25,13 +23,9 @@ class TestsController < ApplicationController
   end
 
   # Edit -> Update
-  def edit
-    @test = Test.find(params[:id])
-  end
+  def edit; end
 
   def update
-    @test = Test.find(params[:id])
-
     if @test.update(test_params)
       redirect_to root_path
     else
