@@ -1,0 +1,21 @@
+<div>
+  <% if @test.questions.any? %>
+    <strong>Test questions:</strong>
+    <table>
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Body</th>
+        <th colspan="3">Action</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <%= render @test.questions %>
+
+      </tbody>
+    </table>
+  <% else %>
+    <p>No questions yet</p>
+  <% end %>
+</div>

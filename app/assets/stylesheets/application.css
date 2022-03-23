@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 17px;
+}
+footer a {
+    margin-left: 6px;
+}
+footer .container {
+    display: flex;
+    justify-content: center;
+}
+.footer__icon-heart {
+    color: deeppink;
+}
