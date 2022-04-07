@@ -1,12 +1,5 @@
-<p>
-  <strong>Title:</strong>
-  <%= @test.title %>
-</p>
-
-<p>
-  <strong>Level:</strong>
-  <%= @test.level %>
-</p>
+<h3>Title: <%= @test.title %></h3>
+<h3>Level: <%= test_level(@test) %></h3>
 
 <%= render partial: 'questions/test_questions' %>
 <br>
