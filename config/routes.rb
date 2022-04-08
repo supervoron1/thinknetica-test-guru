@@ -7,6 +7,10 @@ Rails.application.routes.draw do
       resources :answers, except: :index
     end
     # resources :questions
+
+    member do
+      post :start
+    end
   end
 
   # GET /passed_test/999/result
