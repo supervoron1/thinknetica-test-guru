@@ -19,7 +19,7 @@ class PassedTest < ApplicationRecord
   end
 
   def result
-    (self.correct_questions * 100) / self.test.questions.count
+    (self.correct_questions * 100) / self.test&.questions.count
   end
 
   def success?
@@ -27,13 +27,13 @@ class PassedTest < ApplicationRecord
   end
 
   def question_position
-    self.test.questions.find_index(current_question) + 1
+    self.test&.questions.find_index(current_question) + 1
   end
 
   private
 
   def before_validation_set_first_question
-    self.current_question = test.questions.first if test.present?
+    self.current_question = test&.questions.first
   end
 
   def before_update_set_next_question
@@ -52,6 +52,6 @@ class PassedTest < ApplicationRecord
   end
 
   def next_question
-    test.questions.order(:id).where('id > ?', current_question.id).first
+    test&.questions.order(:id).where('id > ?', current_question.id).first
   end
 end

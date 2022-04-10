@@ -1,8 +1,6 @@
-<h1>Passing the <%= @passed_test.test.title %> Test</h1>
+<h1>Passing the "<%= @passed_test.test.title %>" Test</h1>
 
-<b>
-  Current question is <%= @passed_test.question_position %>/<%= @passed_test.test.questions.count %>
-</b>
+<h3>Question <%= @passed_test.question_position %> of <%= @passed_test.test.questions.count %></h3><br>
 
 <b><%= @passed_test.current_question.body %></b>
 
