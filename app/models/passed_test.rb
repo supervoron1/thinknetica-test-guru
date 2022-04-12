@@ -9,31 +9,38 @@ class PassedTest < ApplicationRecord
   SUCCESS_PERCENT = 85
 
   def completed?
-    current_question.nil?
+    # current_question.nil?
+    taken_questions == test_questions.count
   end
 
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
+    self.taken_questions += 1
 
     save!
   end
 
   def result
-    (self.correct_questions * 100) / self.test&.questions.count
+    (self.correct_questions * 100) / test_questions.count
   end
 
   def success?
     result >= SUCCESS_PERCENT
   end
 
-  def question_position
-    self.test&.questions.find_index(current_question) + 1
+  # Using 'taken_questions' attribute instead
+  # def question_position
+  #   self.test&.questions.find_index(current_question) + 1
+  # end
+
+  def test_questions
+    self.test&.questions
   end
 
   private
 
   def before_validation_set_first_question
-    self.current_question = test&.questions.first
+    self.current_question = test_questions.first
   end
 
   def before_update_set_next_question
@@ -52,6 +59,6 @@ class PassedTest < ApplicationRecord
   end
 
   def next_question
-    test&.questions.order(:id).where('id > ?', current_question.id).first
+    test_questions.order(:id).where('id > ?', current_question.id).first
   end
 end

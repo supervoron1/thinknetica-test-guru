@@ -1,6 +1,6 @@
 <h1>Passing the "<%= @passed_test.test.title %>" Test</h1>
 
-<h3>Question <%= @passed_test.question_position %> of <%= @passed_test.test.questions.count %></h3><br>
+<h3>Question <%= @passed_test.taken_questions + 1 %> of <%= @passed_test.test_questions.count %></h3><br>
 
 <b><%= @passed_test.current_question.body %></b>
 

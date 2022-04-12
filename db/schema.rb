@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2022_04_07_185016) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "current_question_id"
     t.integer "correct_questions", default: 0
+    t.integer "taken_questions", default: 0
     t.index ["current_question_id"], name: "index_passed_tests_on_current_question_id"
     t.index ["test_id"], name: "index_passed_tests_on_test_id"
     t.index ["user_id"], name: "index_passed_tests_on_user_id"
