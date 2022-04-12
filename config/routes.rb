@@ -4,8 +4,19 @@ Rails.application.routes.draw do
 
   resources :tests, shallow: true do
     resources :questions do
-      resources :answers
+      resources :answers, except: :index
     end
     # resources :questions
+
+    member do
+      post :start
+    end
+  end
+
+  # GET /passed_test/999/result
+  resources :passed_test, only: %i[show update] do
+    member do
+      get :result
+    end
   end
 end

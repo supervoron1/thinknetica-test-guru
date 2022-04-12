@@ -1,0 +1,12 @@
+<h3>The <%= @passed_test.test.title %> was completed</h3>
+<b>You <%= @passed_test.success? ? 'passed' : 'failed' %> the test.</b>
+<b>
+  Your result is
+  <span
+    style="color:<%= @passed_test.success? ? 'green' : 'red' %>"><%= @passed_test.result %>%
+  </span>
+</b>
+
+<p>
+  <%= link_to 'Back to list of tests', tests_path %>
+</p>

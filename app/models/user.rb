@@ -10,4 +10,8 @@ class User < ApplicationRecord
     #     .where(passed_tests: { user_id: self.id }, level: level)
     tests.where(level: level)
   end
+
+  def test_passage(test)
+    passed_tests.order(id: :desc).find_by(test_id: test.id)
+  end
 end

@@ -1,0 +1,2 @@
+module PassedTestHelper
+end

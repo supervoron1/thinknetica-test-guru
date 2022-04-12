@@ -37,8 +37,3 @@ Answer.create(body: 'Sinatra', correct: false, question_id: question[0].id)
 Answer.create(body: 'Ruby on Rails', correct: true, question_id: question[0].id)
 Answer.create(body: 'MVP', correct: false, question_id: question[1].id)
 Answer.create(body: 'MVC', correct: true, question_id: question[1].id)
-
-PassedTest.create(test_id: 4, user_id: 4)
-PassedTest.create(test_id: 1, user_id: 4)
-PassedTest.create(test_id: 2, user_id: 4)
-PassedTest.create(test_id: 3, user_id: 4)

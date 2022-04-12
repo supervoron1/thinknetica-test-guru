@@ -1,3 +1,16 @@
+<h3><%= @question.test.title %> Question</h3>
 <p><%= @question.body %></p>
-<br>
-<%= link_to 'Back to test page', test_path(@test) %>
+
+<h3>Answers</h3>
+<%= link_to 'New answer', new_question_answer_path(@question) %>
+
+<% if @question.answers.any? %>
+  <ol>
+    <%= render @question.answers %>
+  </ol>
+<% else %>
+  <p>No answers created yet</p>
+<% end %>
+
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', test_path(@question.test) %>
