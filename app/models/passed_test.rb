@@ -52,6 +52,11 @@ class PassedTest < ApplicationRecord
 
     (correct_answers_count == correct_answers.where(id: answer_ids).count) &&
       correct_answers_count == answer_ids.count
+
+    # if only one condition
+    # Answer.find_by(id: answer_id)&.correct
+    # or
+    # Answer.where(id: answer_id).pluck(:correct)
   end
 
   def correct_answers

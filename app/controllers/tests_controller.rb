@@ -40,8 +40,8 @@ class TestsController < ApplicationController
   end
 
   def start
-    # @user.tests.push(@test)
-    PassedTest.create(test_id: @test.id, user_id: @user.id )
+    # @user.tests << @test
+    PassedTest.create(test: @test, user: @user)
     redirect_to @user.test_passage(@test)
   end
 
