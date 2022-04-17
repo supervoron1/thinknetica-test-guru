@@ -1,9 +1,15 @@
+require 'digest/sha1'
+
 class User < ApplicationRecord
+
+  # Not used. Custom auth before embedded `has_secure_password` was engaged
+  # include Auth
+
   has_many :passed_tests
   has_many :tests, through: :passed_tests
   has_many :created_tests, class_name: 'Test', foreign_key: :author_id
 
-  validates :email, presence: true
+  has_secure_password
 
   def tests_by_level(level)
     # Test.joins('LEFT JOIN passed_tests ON passed_tests.test_id = test.id')
@@ -14,4 +20,5 @@ class User < ApplicationRecord
   def test_passage(test)
     passed_tests.order(id: :desc).find_by(test_id: test.id)
   end
+
 end
