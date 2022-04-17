@@ -11,9 +11,8 @@
   </head>
 
   <body>
-  <% if logged_in? %>
-    <p class="nav user">Welcome, <b><%= current_user.login %></b> Guru</p>
-  <% end %>
+    <%= render 'shared/navigation' %>
+    <%= display_flashes %>
     <%= yield %>
     <%= render 'layouts/footer' %>
   </body>
