@@ -4,9 +4,8 @@ class ApplicationController < ActionController::Base
   private
 
   def authenticate_user!
-    unless current_user
-      redirect_to login_path, alert: 'Are you a Guru? Verify your Email and Password please'
-    end
+    session[:return_to] = request.original_url
+    redirect_to login_path, alert: 'Are you a Guru? Verify your Email and Password please' unless current_user
   end
 
   def current_user
