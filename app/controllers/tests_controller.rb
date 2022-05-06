@@ -44,8 +44,8 @@ class TestsController < ApplicationController
 
   def start
     # @user.tests << @test
-    PassedTest.create(test: @test, user: @current_user)
-    redirect_to @current_user.test_passage(@test)
+    PassedTest.create(test: @test, user: current_user)
+    redirect_to current_user.test_passage(@test)
   end
 
   private

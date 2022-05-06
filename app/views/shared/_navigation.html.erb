@@ -9,7 +9,7 @@
 
 <% if user_signed_in? %>
   <p class="nav user">
-    Welcome, <b><%= current_user.login %></b> Guru |
+    Welcome, <b><%= current_user.email %></b> Guru |
     <%= link_to 'LogOut', destroy_user_session_path, method: :delete %>
   </p>
 <% end %>
