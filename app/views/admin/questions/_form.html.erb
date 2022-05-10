@@ -6,6 +6,6 @@
   <br>
   <div>
     <%= form.submit %>
-    <%= link_to 'Back', (@test || @question.test) %>
+    <%= link_to 'Back', admin_test_path(@test || @question.test) %>
   </div>
 <% end %>

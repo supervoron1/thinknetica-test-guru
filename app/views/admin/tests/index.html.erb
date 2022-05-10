@@ -8,10 +8,12 @@
     <th>Category</th>
     <th>Total questions</th>
     <th>Author</th>
-    <th>Action</th>
+    <th colspan="2">Action</th>
   </tr>
   </thead>
   <tbody>
   <%= render @tests %>
   </tbody>
 </table>
+<br>
+<%= link_to 'Create test', new_admin_test_path %>

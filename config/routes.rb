@@ -12,12 +12,7 @@ Rails.application.routes.draw do
   # resources :users, only: :create
   # resources :sessions, only: :create
 
-  resources :tests, shallow: true do
-    resources :questions do
-      resources :answers, except: :index
-    end
-    # resources :questions
-
+  resources :tests, only: :index do
     member do
       post :start
     end
@@ -27,6 +22,14 @@ Rails.application.routes.draw do
   resources :passed_test, only: %i[show update] do
     member do
       get :result
+    end
+  end
+
+  namespace :admin do
+    resources :tests, shallow: true do
+      resources :questions, except: :index do
+        resources :answers, except: :index
+      end
     end
   end
 end
