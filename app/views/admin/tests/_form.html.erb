@@ -16,7 +16,8 @@
     <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
   </div>
 
-  <%= form.hidden_field :author_id, value: current_user.id %><br>
+  <!--unnecessarily-->
+<!--  <%#= form.hidden_field :author_id, value: current_user.id %><br>-->
 
   <div>
     <%= form.submit %>
