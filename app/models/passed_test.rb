@@ -5,6 +5,7 @@ class PassedTest < ApplicationRecord
 
   before_validation :before_validation_set_first_question, on: :create
   before_update :before_update_set_next_question
+  before_update :before_update_send_mail
 
   SUCCESS_PERCENT = 85
 
@@ -45,6 +46,10 @@ class PassedTest < ApplicationRecord
 
   def before_update_set_next_question
     self.current_question = next_question
+  end
+
+  def before_update_send_mail
+    TestsMailer.completed_test(self).deliver_now if self.completed?
   end
 
   def correct_answer?(answer_ids)

@@ -1,0 +1,26 @@
+<%= form_with model: [:admin, @test], local: true do |form| %>
+  <%= render 'shared/errors', resource: @test %>
+
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title, id: :test_title %>
+  </div>
+
+  <div>
+    <%= form.label :level %><br>
+    <%= form.number_field :level, id: :test_level %>
+  </div>
+
+  <div>
+    <%= form.label :category_id %><br>
+    <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
+  </div>
+
+  <!--unnecessarily-->
+<!--  <%#= form.hidden_field :author_id, value: current_user.id %><br>-->
+
+  <div>
+    <%= form.submit %>
+    <%= link_to 'Back', admin_tests_path %>
+  </div>
+<% end %>
