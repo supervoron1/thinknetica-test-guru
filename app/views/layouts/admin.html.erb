@@ -11,10 +11,12 @@
 </head>
 
 <body>
-<%= render 'admin/nav' %>
+<div class="container">
+  <%= render 'admin/nav' %>
 <%#= debug(flash) %>
-<%= display_flashes %>
-<%= yield %>
-<%= render 'layouts/footer' %>
+  <%= display_flashes %>
+  <%= yield %>
+  <%= render 'layouts/footer' %>
+</div>
 </body>
 </html>
