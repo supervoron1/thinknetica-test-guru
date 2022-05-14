@@ -31,3 +31,66 @@
 
 en:
   hello: "Hello world"
+
+  helpers:
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+    select_prompt: "Please select"
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
+  tests:
+    index:
+      header: "Tricky Tests"
+      title: "Title"
+      level: "Level"
+      category: "Category"
+      questions_count: "Questions count"
+      author: "Author"
+      actions: "Actions"
+    test:
+      start: "Start"
+
+  passed_test:
+    show:
+      header: "Passing the %{title} test"
+      current_question_is: "Current question is %{current} of %{total}"
+      next: "Next question"
+    result:
+      header: "The %{title} test was completed"
+
+  admin:
+    tests:
+      index:
+        header: "Tricky Tests"
+        title: "Title"
+        level: "Level"
+        category: "Category"
+        questions_count: "Questions count"
+        author: "Author"
+        actions: "Actions"
+        add_new: "Add new test"
+      test:
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
+      create:
+        success: "Test was successfully created"
+      show:
+        title: "Title"
+        level: "Level"
+
+  tests_mailer:
+    completed_test:
+      subject: 'You just completed the TestGuru test!'

@@ -1,4 +1,4 @@
-<h3>The <%= @passed_test.test.title %> was completed</h3>
+<h3><%= t('.header', title: @passed_test.test.title) %></h3>
 <b>You <%= @passed_test.success? ? 'passed' : 'failed' %> the test.</b>
 <b>
   Your result is

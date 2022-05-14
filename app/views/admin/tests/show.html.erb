@@ -1,5 +1,5 @@
-<h3>Title: <%= @test.title %></h3>
-<h3>Level: <%= test_level(@test) %></h3>
+<h3><%= t('.title') %>: <%= @test.title %></h3>
+<h3><%= t('.level') %>: <%= test_level(@test) %></h3>
 
 <%= render 'admin/questions/test_questions' %>
 <br>
