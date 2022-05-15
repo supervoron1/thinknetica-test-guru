@@ -1,7 +1,7 @@
-<h3><%= t('.title') %>: <%= @test.title %></h3>
+<h3 class="mt-4"><%= t('.title') %>: <%= @test.title %></h3>
 <h3><%= t('.level') %>: <%= test_level(@test) %></h3>
 
 <%= render 'admin/questions/test_questions' %>
 <br>
-<%= link_to t('.new_question'), new_admin_test_question_path(@test) %> |
-<%= link_to t('.back_to_tests'), admin_tests_path %>
+<%= link_to t('.new_question'), new_admin_test_question_path(@test), class: 'btn btn-primary' %><br>
+<%= link_to t('.back_to_tests'), admin_tests_path, class: 'btn btn-primary mt-3' %>

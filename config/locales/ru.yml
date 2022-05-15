@@ -28,7 +28,7 @@ ru:
       title: "Название"
       level: "Уровень"
       category: "Категория"
-      questions_count: "Количество вопросов"
+      questions_count: "Кол-во вопросов"
       author: "Автор"
       actions: "Действия"
     test:
@@ -55,7 +55,7 @@ ru:
         title: "Название"
         level: "Уровень"
         category: "Категория"
-        questions_count: "Количество вопросов"
+        questions_count: "Кол-во вопросов"
         author: "Автор"
         actions: "Действия"
         add_new: "Добавить новый тест"

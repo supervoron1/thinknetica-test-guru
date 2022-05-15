@@ -1,26 +1,26 @@
 <%= form_with model: [:admin, @test], local: true do |form| %>
   <%= render 'shared/errors', resource: @test %>
-
-  <div>
-    <%= form.label :title %><br>
-    <%= form.text_field :title, id: :test_title %>
+<%# console %>
+  <div class="">
+    <div><%= form.label :title, class: "form-label" %></div>
+    <div><%= form.text_field :title, id: :test_title, class: "form-control" %></div>
   </div>
 
   <div class="mt-1">
-    <%= form.label :level %><br>
-    <%= form.number_field :level, id: :test_level %>
+    <div><%= form.label :level, class: "form-label" %></div>
+    <div><%= form.number_field :level, id: :test_level, class: "form-control" %></div>
   </div>
 
   <div class="mt-1">
-    <%= form.label :category_id %><br>
-    <%= form.collection_select :category_id, Category.all, :id, :title, :prompt => I18n.t('helpers.select.prompt') %>
+    <div><%= form.label :category, class: "form-label" %></div>
+    <div><%= form.collection_select :category_id, Category.all, :id, :title, options = {:prompt => I18n.t('helpers.select.prompt')}, html_options = {:class => :'form-select'}  %></div>
   </div>
 
   <!--unnecessarily-->
 <!--  <%#= form.hidden_field :author_id, value: current_user.id %><br>-->
 
   <div class="mt-3">
-    <%= form.submit %>
-    <%= link_to t('.back_to_tests'), admin_tests_path %>
+    <%= form.submit :class => 'btn btn-primary' %><br>
+    <%= link_to t('.back_to_tests'), admin_tests_path, class: 'btn btn-primary mt-3' %>
   </div>
 <% end %>

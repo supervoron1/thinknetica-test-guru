@@ -1,12 +1,12 @@
 <div>
   <% if @test.questions.any? %>
     <h3><%= t('.header') %></h3>
-    <table>
+    <table class="table table-striped">
       <thead>
       <tr>
         <th><%= t('.id') %></th>
         <th><%= t('.title') %></th>
-        <th colspan="3"><%= t('.action') %></th>
+        <th colspan="3" style="text-align: center"><%= t('.action') %></th>
       </tr>
       </thead>
 
