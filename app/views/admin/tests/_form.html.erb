@@ -13,7 +13,7 @@
 
   <div class="mt-1">
     <%= form.label :category_id %><br>
-    <%= form.collection_select :category_id, Category.all, :id, :title, :prompt => I18n.t('helpers.select_prompt') %>
+    <%= form.collection_select :category_id, Category.all, :id, :title, :prompt => I18n.t('helpers.select.prompt') %>
   </div>
 
   <!--unnecessarily-->
@@ -21,6 +21,6 @@
 
   <div class="mt-3">
     <%= form.submit %>
-    <%= link_to 'Back', admin_tests_path %>
+    <%= link_to t('.back_to_tests'), admin_tests_path %>
   </div>
 <% end %>

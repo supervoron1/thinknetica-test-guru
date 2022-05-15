@@ -42,7 +42,8 @@ en:
         title: "Title"
         level: "Level"
         category_id: "Category"
-    select_prompt: "Please select"
+    select:
+      prompt: "Please select"
 
   shared:
     errors:
@@ -69,9 +70,15 @@ en:
       next: "Next question"
     result:
       header: "The %{title} test was completed"
+      passed: "You passed the test."
+      failed: "You failed the test."
+      result: "Your result is"
+      back_to_tests: "Back to list of tests"
 
   admin:
     tests:
+      new:
+        header: "Create new test"
       index:
         header: "Tricky Tests"
         title: "Title"
@@ -90,6 +97,20 @@ en:
       show:
         title: "Title"
         level: "Level"
+        new_question: "Add new question"
+        back_to_tests: "Back to tests"
+      form:
+        back_to_tests: "Back to tests"
+    questions:
+      test_questions:
+        header: "Test questions:"
+        id: "ID"
+        title: "Title"
+        action: "Action"
+        no_questions: "No questions yet"
+    nav:
+      title: "Test Guru Admin Panel"
+      logout: "Logout"
 
   tests_mailer:
     completed_test:

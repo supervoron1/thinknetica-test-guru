@@ -11,7 +11,8 @@ ru:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
-    select_prompt: "Пожалуйста выберите"
+    select:
+      prompt: "Пожалуйста выберите"
 
   shared:
     errors:
@@ -40,9 +41,15 @@ ru:
       next: "Следующий вопрос"
     result:
       header: "Тест %{title} был завершен"
+      passed: "Вы успешно прошли тест."
+      failed: "К сожалению, тест не пройден."
+      result: "Ваш результат - "
+      back_to_tests: "К списку всех тестов"
 
   admin:
     tests:
+      new:
+        header: "Создать новый тест"
       index:
         header: "Доступные тесты"
         title: "Название"
@@ -61,6 +68,20 @@ ru:
       show:
         title: "Название"
         level: "Уровень"
+        new_question: "Добавить новый вопрос"
+        back_to_tests: "К списку всех тестов"
+      form:
+        back_to_tests: "К списку всех тестов"
+    questions:
+      test_questions:
+        header: "Вопросы теста:"
+        id: "ID"
+        title: "Название"
+        action: "Действия"
+        no_questions: "У данного теста еще нет вопросов"
+    nav:
+      title: "Панель администратора Test Guru"
+      logout: "Выйти"
 
   tests_mailer:
     completed_test:
