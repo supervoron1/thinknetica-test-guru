@@ -1,12 +1,12 @@
 <div>
   <% if @test.questions.any? %>
-    <h3>Test questions:</h3>
-    <table>
+    <h3><%= t('.header') %></h3>
+    <table class="table table-striped">
       <thead>
       <tr>
-        <th>ID</th>
-        <th>Body</th>
-        <th colspan="3">Action</th>
+        <th><%= t('.id') %></th>
+        <th><%= t('.title') %></th>
+        <th colspan="3" style="text-align: center"><%= t('.action') %></th>
       </tr>
       </thead>
 
@@ -16,6 +16,6 @@
       </tbody>
     </table>
   <% else %>
-    <p>No questions yet</p>
+    <p><%= t('.no_questions') %></p>
   <% end %>
 </div>

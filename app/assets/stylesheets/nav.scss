@@ -37,10 +37,31 @@
 }
 
 .nav-admin.title, .nav-user.title {
-  font-size: 140%;
+  font-size: 130%;
   font-weight: bold;
+  color: #fff;
+  margin-left: 14px;
 }
 
-.nav-admin.user-email, .nav-user.user-email {
+.nav-admin.user {
+  color: #ffffff;
+}
+
+.nav-admin.user-email:hover, .nav-user.user-email {
+  cursor: pointer;
   text-decoration: underline;
+}
+
+.navbar-icon {
+  width: 140px;
+  height: 50px;
+  background: url("guru_blue.png") no-repeat center/100%;
+}
+
+.nav-admin a {
+  color: #ffffff;
+   &:hover {
+     color: #000;
+     text-shadow: 1px 1px 1px #4293e6;
+   }
 }

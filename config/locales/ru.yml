@@ -1,0 +1,88 @@
+ru:
+  hello: "Привет мир"
+
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+    select:
+      prompt: "Пожалуйста выберите"
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+
+  tests:
+    index:
+      header: "Доступные тесты"
+      title: "Название"
+      level: "Уровень"
+      category: "Категория"
+      questions_count: "Кол-во вопросов"
+      author: "Автор"
+      actions: "Действия"
+    test:
+      start: "Начать"
+
+  passed_test:
+    show:
+      header: "Проходим тест %{title}"
+      current_question_is: "Текущий вопрос %{current} из %{total}"
+      next: "Следующий вопрос"
+    result:
+      header: "Тест %{title} был завершен"
+      passed: "Вы успешно прошли тест."
+      failed: "К сожалению, тест не пройден."
+      result: "Ваш результат - "
+      back_to_tests: "К списку всех тестов"
+
+  admin:
+    tests:
+      new:
+        header: "Создать новый тест"
+      index:
+        header: "Доступные тесты"
+        title: "Название"
+        level: "Уровень"
+        category: "Категория"
+        questions_count: "Кол-во вопросов"
+        author: "Автор"
+        actions: "Действия"
+        add_new: "Добавить новый тест"
+      test:
+        edit: "Редактировать"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
+      create:
+        success: "Тест успешно создан"
+      show:
+        title: "Название"
+        level: "Уровень"
+        new_question: "Добавить новый вопрос"
+        back_to_tests: "К списку всех тестов"
+      form:
+        back_to_tests: "К списку всех тестов"
+    questions:
+      test_questions:
+        header: "Вопросы теста:"
+        id: "ID"
+        title: "Название"
+        action: "Действия"
+        no_questions: "У данного теста еще нет вопросов"
+    nav:
+      title: "Панель администратора Test Guru"
+      logout: "Выйти"
+
+  tests_mailer:
+    completed_test:
+      subject: 'Вы успешно завершили тест на TestGuru!'

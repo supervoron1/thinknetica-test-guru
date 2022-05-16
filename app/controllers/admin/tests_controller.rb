@@ -14,9 +14,8 @@ class Admin::TestsController < Admin::BaseController
 
   def create
     @test = current_user.created_tests.new(test_params)
-
     if @test.save
-      redirect_to admin_test_path(@test)
+      redirect_to admin_test_path(@test), notice: t('.success')
     else
       render :new # Just rendering view '/tests/new' using @test (action #new not used)
     end

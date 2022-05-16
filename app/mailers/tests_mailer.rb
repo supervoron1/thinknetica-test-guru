@@ -4,6 +4,6 @@ class TestsMailer < ApplicationMailer
     @user = passed_test.user
     @test = passed_test.test
 
-    mail to: @user.email, subject: 'You just completed the TestGuru test!'
+    mail to: @user.email # subject is in localization entity available thru naming conventions
   end
 end

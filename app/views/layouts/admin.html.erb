@@ -11,8 +11,9 @@
 </head>
 
 <body>
+<header class="navbar-expand-lg navbar-dark bd-navbar sticky-top"><%= render 'admin/nav' %></header>
 <div class="container">
-  <%= render 'admin/nav' %>
+
 <%#= debug(flash) %>
   <%= display_flashes %>
   <%= yield %>

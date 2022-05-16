@@ -31,3 +31,87 @@
 
 en:
   hello: "Hello world"
+
+  helpers:
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+    select:
+      prompt: "Please select"
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
+  tests:
+    index:
+      header: "Tricky Tests"
+      title: "Title"
+      level: "Level"
+      category: "Category"
+      questions_count: "Questions count"
+      author: "Author"
+      actions: "Actions"
+    test:
+      start: "Start"
+
+  passed_test:
+    show:
+      header: "Passing the %{title} test"
+      current_question_is: "Current question is %{current} of %{total}"
+      next: "Next question"
+    result:
+      header: "The %{title} test was completed"
+      passed: "You passed the test."
+      failed: "You failed the test."
+      result: "Your result is"
+      back_to_tests: "Back to list of tests"
+
+  admin:
+    tests:
+      new:
+        header: "Create new test"
+      index:
+        header: "Tricky Tests"
+        title: "Title"
+        level: "Level"
+        category: "Category"
+        questions_count: "Questions count"
+        author: "Author"
+        actions: "Actions"
+        add_new: "Add new test"
+      test:
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
+      create:
+        success: "Test was successfully created"
+      show:
+        title: "Title"
+        level: "Level"
+        new_question: "Add new question"
+        back_to_tests: "Back to tests"
+      form:
+        back_to_tests: "Back to tests"
+    questions:
+      test_questions:
+        header: "Test questions:"
+        id: "ID"
+        title: "Title"
+        action: "Action"
+        no_questions: "No questions yet"
+    nav:
+      title: "Test Guru Admin Panel"
+      logout: "Logout"
+
+  tests_mailer:
+    completed_test:
+      subject: 'You just completed the TestGuru test!'
