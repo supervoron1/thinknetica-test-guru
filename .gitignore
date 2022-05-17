@@ -12,6 +12,7 @@
 
 # Ignore .ENV config
 /.env
+.env
 
 # Ignore the default SQLite database.
 /db/*.sqlite3

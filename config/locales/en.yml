@@ -75,7 +75,7 @@ en:
       result: "Your result is"
       back_to_tests: "Back to list of tests"
     gist:
-      success: "Gist was successfully created!"
+      success: "Gist was successfully created! You can find it here: %{gist_url}"
       failure: "An error occurred while saving gist"
 
   admin:

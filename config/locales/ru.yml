@@ -46,7 +46,7 @@ ru:
       result: "Ваш результат - "
       back_to_tests: "К списку всех тестов"
     gist:
-      success: "Gist успешно сохранен!"
+      success: "Gist успешно сохранен! Вы можете найти его здесь - %{gist_url}"
       failure: "Во время создания gist произошла ошибка"
 
   admin:

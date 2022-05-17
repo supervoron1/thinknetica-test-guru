@@ -28,7 +28,8 @@ class PassedTestController < ApplicationController
     result = service.call
 
     flash_options = if service.success?
-                      { notice: t('.success') }
+                      html_url = result.html_url
+                      { notice: t('.success', gist_url: html_url) }
                     else
                       { notice: t('.failure') }
                     end
