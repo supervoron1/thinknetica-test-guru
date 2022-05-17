@@ -24,8 +24,14 @@ class PassedTestController < ApplicationController
   end
 
   def gist
-    result = GistQuestionService.new(@passed_test.current_question).call
-    flash_options = result.success? ? { notice: t('.success') } : { notice: t('.failure') }
+    service = GistQuestionService.new(@passed_test.current_question)
+    result = service.call
+
+    flash_options = if service.success?
+                      { notice: t('.success') }
+                    else
+                      { notice: t('.failure') }
+                    end
     redirect_to @passed_test, flash_options
   end
 

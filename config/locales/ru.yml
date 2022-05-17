@@ -47,7 +47,7 @@ ru:
       back_to_tests: "К списку всех тестов"
     gist:
       success: "Gist успешно сохранен!"
-      failure: "Во время созрания gist произошла ошибка"
+      failure: "Во время создания gist произошла ошибка"
 
   admin:
     tests:
