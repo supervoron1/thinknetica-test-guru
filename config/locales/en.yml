@@ -74,6 +74,9 @@ en:
       failed: "You failed the test."
       result: "Your result is"
       back_to_tests: "Back to list of tests"
+    gist:
+      success: "Gist was successfully created!"
+      failure: "An error occurred while saving gist"
 
   admin:
     tests:

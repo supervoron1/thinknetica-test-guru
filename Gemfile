@@ -28,6 +28,9 @@ gem 'rails-i18n', '~> 6.0.0'
 # AUTH
 gem 'devise', '~> 4.0'
 
+# NETWORKING
+gem 'faraday'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

@@ -45,6 +45,9 @@ ru:
       failed: "К сожалению, тест не пройден."
       result: "Ваш результат - "
       back_to_tests: "К списку всех тестов"
+    gist:
+      success: "Gist успешно сохранен!"
+      failure: "Во время созрания gist произошла ошибка"
 
   admin:
     tests:
