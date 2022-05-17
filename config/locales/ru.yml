@@ -84,7 +84,16 @@ ru:
         no_questions: "У данного теста еще нет вопросов"
     nav:
       title: "Панель администратора Test Guru"
+      gists: "Gists"
+      tests: "Тесты"
       logout: "Выйти"
+    gists:
+      index:
+        header: "Gists"
+        question: "Вопрос"
+        URL: "URL"
+        author: "Автор"
+        no_gists: "У вас нет созданных gists"
 
   tests_mailer:
     completed_test:
