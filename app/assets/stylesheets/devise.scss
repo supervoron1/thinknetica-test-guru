@@ -1,0 +1,13 @@
+.confirm-icon {
+  position: absolute;
+  bottom: 11px;
+  right: 12px;
+
+  &-red {
+    fill: #dc3545;
+  }
+
+  &-green {
+    fill: #198754;
+  }
+}
