@@ -11,13 +11,11 @@
 </head>
 
 <body>
-<header class="navbar-expand-lg navbar-dark bd-navbar sticky-top"><%= render 'admin/nav' %></header>
-<div class="container">
-
-<%#= debug(flash) %>
-  <%= display_flashes %>
-  <%= yield %>
+  <header class="navbar-expand-lg navbar-dark bd-navbar sticky-top"><%= render 'admin/nav' %></header>
+  <div class="container">
+    <%= display_flashes %>
+    <%= yield %>
+  </div>
   <%= render 'layouts/footer' %>
-</div>
 </body>
 </html>
