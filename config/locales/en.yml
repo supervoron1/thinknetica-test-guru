@@ -74,6 +74,9 @@ en:
       failed: "You failed the test."
       result: "Your result is"
       back_to_tests: "Back to list of tests"
+    gist:
+      success: "Gist was successfully created! You can find it here: %{gist_url}"
+      failure: "An error occurred while saving gist"
 
   admin:
     tests:
@@ -110,7 +113,16 @@ en:
         no_questions: "No questions yet"
     nav:
       title: "Test Guru Admin Panel"
+      gists: "Gists"
+      tests: "Tests"
       logout: "Logout"
+    gists:
+      index:
+        header: "Gists"
+        question: "Questions"
+        URL: "URL"
+        author: "Author"
+        no_gists: "You don't have any gists"
 
   tests_mailer:
     completed_test:

@@ -45,6 +45,9 @@ ru:
       failed: "К сожалению, тест не пройден."
       result: "Ваш результат - "
       back_to_tests: "К списку всех тестов"
+    gist:
+      success: "Gist успешно сохранен! Вы можете найти его здесь - %{gist_url}"
+      failure: "Во время создания gist произошла ошибка"
 
   admin:
     tests:
@@ -81,7 +84,16 @@ ru:
         no_questions: "У данного теста еще нет вопросов"
     nav:
       title: "Панель администратора Test Guru"
+      gists: "Gists"
+      tests: "Тесты"
       logout: "Выйти"
+    gists:
+      index:
+        header: "Gists"
+        question: "Вопрос"
+        URL: "URL"
+        author: "Автор"
+        no_gists: "У вас нет созданных gists"
 
   tests_mailer:
     completed_test:

@@ -1,0 +1,14 @@
+<h1 class="mt-4"><%= t('.header') %></h1>
+
+<% if @gists.present? %>
+  <table class="table table-striped table-hover">
+    <tr>
+      <th><%= t('.question') %></a></th>
+      <th><%= t('.URL') %></th>
+      <th><%= t('.author') %></th>
+    </tr>
+    <%= render @gists %>
+  </table>
+<% else %>
+  <h1><%= t('.no_gists') %></h1>
+<% end %>

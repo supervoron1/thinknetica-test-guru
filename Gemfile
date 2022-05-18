@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.6'
 
+# Env loader
+gem 'dotenv-rails', groups: [:development, :test]
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.1'
 # Use sqlite3 as the database for Active Record
@@ -27,6 +29,12 @@ gem 'rails-i18n', '~> 6.0.0'
 
 # AUTH
 gem 'devise', '~> 4.0'
+
+# NETWORKING
+gem 'faraday'
+
+# Github client
+gem 'octokit', '~> 4.0'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
