@@ -14,19 +14,12 @@
  *= require_self
  */
 
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    font-size: 17px;
+@import "bootstrap/dist/css/bootstrap";
+@import 'typography/icons';
+@import 'typography/fonts';
+@import 'typography/colors';
+
+a {
+    text-decoration: none;
 }
-footer a {
-    margin-left: 6px;
-}
-footer .container {
-    display: flex;
-    justify-content: center;
-}
-.footer__icon-heart {
-    color: deeppink;
-}
+
