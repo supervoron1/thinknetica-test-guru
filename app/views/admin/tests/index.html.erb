@@ -1,5 +1,7 @@
 <h1 class="mt-4"><%= t('.header') %></h1>
 
+<%= render 'shared/errors', resource: @test %>
+
 <table class="table table-striped table-hover">
   <thead class="tests-header">
   <tr>
@@ -12,7 +14,7 @@
     <th scope="col"><%= t('.category') %></th>
     <th scope="col"><%= t('.questions_count') %></th>
     <th scope="col"><%= t('.author') %></th>
-    <th scope="col" colspan="2" style="text-align: center"><%= t('.actions') %></th>
+    <th scope="col" colspan="3" style="text-align: center"><%= t('.actions') %></th>
   </tr>
   </thead>
   <tbody>
