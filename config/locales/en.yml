@@ -92,6 +92,7 @@ en:
         actions: "Actions"
         add_new: "Add new test"
       test:
+        show: "Show"
         edit: "Edit"
         delete: "Delete"
         confirm: "Are you sure?"
@@ -104,6 +105,8 @@ en:
         back_to_tests: "Back to tests"
       form:
         back_to_tests: "Back to tests"
+      form_inline:
+        submit: "OK"
     questions:
       test_questions:
         header: "Test questions:"

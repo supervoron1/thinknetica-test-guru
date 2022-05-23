@@ -1,6 +1,16 @@
 <h1><%= t('.header', title: @passed_test.test.title) %></h1>
 
-<h3><%= t('.current_question_is', current: @passed_test.taken_questions + 1, total: @passed_test.test_questions.count) %></h3><br>
+<h3><%= t('.current_question_is', current: @passed_test.taken_questions + 1, total: @passed_test.test_questions.count) %></h3>
+
+<div class="progress'">
+  <%= content_tag :div,
+                  class: 'progress-bar progress-bar-striped',
+                  role: 'progressbar',
+                  data: { current: @passed_test.taken_questions + 1,
+                          total: @passed_test.test_questions.count } do %>
+    <%= @passed_test.taken_questions + 1 %>/<%= @passed_test.test_questions.count %>
+  <% end %>
+</div><br>
 
 <b><%= @passed_test.current_question.body %></b>
 

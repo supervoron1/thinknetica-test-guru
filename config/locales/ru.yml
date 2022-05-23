@@ -63,6 +63,7 @@ ru:
         actions: "Действия"
         add_new: "Добавить новый тест"
       test:
+        show: "Показать"
         edit: "Редактировать"
         delete: "Удалить"
         confirm: "Вы уверены?"
@@ -75,6 +76,8 @@ ru:
         back_to_tests: "К списку всех тестов"
       form:
         back_to_tests: "К списку всех тестов"
+      form_inline:
+        submit: "OK"
     questions:
       test_questions:
         header: "Вопросы теста:"
