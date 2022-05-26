@@ -12,7 +12,7 @@ default: &default
   encoding: unicode
   host: localhost
   user: postgres
-  password: <%= ENV["DB_PASS"] %>
+#  password: <%#= ENV["DB_PASS"] %>
 
 development:
   <<: *default
