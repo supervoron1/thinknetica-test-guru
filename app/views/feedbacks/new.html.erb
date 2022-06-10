@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="form-group">
+    <h1><%= t('.header') %></h1>
+    <%= form_with model: @feedback, local: true do |form| %>
+      <%= render 'shared/errors', resource: @feedback %>
+      <div class="col-md-6">
+
+
+        <div class="form-control">
+          <%= form.label :text, 'Please, write you message below' %>
+          <%= form.text_area :text, class: 'form-control' %>
+        </div>
+
+        <%= form.submit 'Send Message', class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+  </div>
+</div>

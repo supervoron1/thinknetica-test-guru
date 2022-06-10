@@ -78,6 +78,12 @@ en:
       success: "Gist was successfully created! You can find it here: %{gist_url}"
       failure: "An error occurred while saving gist"
 
+  feedbacks:
+    sent: "Feedback was successfully sent"
+
+    new:
+      header: "Feedback form"
+
   admin:
     tests:
       new:
