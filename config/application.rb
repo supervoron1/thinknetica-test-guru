@@ -18,6 +18,7 @@ module TestGuru
     #
     config.time_zone = "Samara"
     config.i18n.default_locale = :ru
+    config.enable_dependency_loading = true
     config.autoload_paths << "#{Rails.root}/lib/clients"
     # config.eager_load_paths << Rails.root.join("extras")
 
