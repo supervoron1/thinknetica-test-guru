@@ -49,6 +49,12 @@ ru:
       success: "Gist успешно сохранен! Вы можете найти его здесь - %{gist_url}"
       failure: "Во время создания gist произошла ошибка"
 
+  feedbacks:
+    sent: "Фидбэк успешно отправлен"
+
+    new:
+      header: "Форма обратной связи"
+
   admin:
     tests:
       new:

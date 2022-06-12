@@ -1,0 +1,15 @@
+@import "typography/colors";
+
+.confirm-icon {
+  position: absolute;
+  bottom: 11px;
+  right: 12px;
+
+  &-red {
+    fill: $red;
+  }
+
+  &-green {
+    fill: $green;
+  }
+}

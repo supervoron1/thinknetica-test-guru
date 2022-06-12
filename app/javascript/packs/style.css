@@ -1,0 +1,10 @@
+/*@import "application.css";*/
+/*@import "bootstrap/dist/css/bootstrap";*/
+/*@import 'typography/icons';*/
+/*@import 'typography/fonts';*/
+/*@import 'typography/colors';*/
+
+@import "bootstrap/dist/css/bootstrap.css";
+@import '../styles/application.scss';
+/*@import '/typography/_fonts.scss';*/
+/*@import '/typography/_colors.scss';*/

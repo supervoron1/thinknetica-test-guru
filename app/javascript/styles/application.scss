@@ -15,9 +15,11 @@
  */
 
 @import "bootstrap/dist/css/bootstrap.css";
-@import 'typography/_icons.scss';
-@import 'typography/_fonts.scss';
-@import 'typography/_colors.scss';
+/*
+@import '../styles/typography/_icons.scss';
+@import '../styles/typography/_fonts.scss';
+@import '../styles/typography/_colors.scss';
+*/
 
 a {
     text-decoration: none;

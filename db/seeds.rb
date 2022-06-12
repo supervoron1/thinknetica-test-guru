@@ -13,10 +13,10 @@ Category.delete_all
 categories = Category.create([{title: :Ruby}, {title: :Rails}, {title: :JS}, {title: :HTML}])
 
 User.delete_all
-3.times do |i|
-  User.create(login: "user#{i}", email: "user#{i}@hooli.xyz")
-end
-User.create(login: 'admin', email: 'admin@gmail.com')
+# 3.times do |i|
+#   User.create(login: "user#{i}", email: "user#{i}@hooli.xyz")
+# end
+Admin.create(login: 'admin', email: 'vorontsof@mail.ru', password: '121212', first_name: 'Admin', last_name: 'RavenClaw')
 
 Test.delete_all
 tests = Test.create([
