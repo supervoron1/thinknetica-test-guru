@@ -3,13 +3,9 @@ class PassedTestController < ApplicationController
   before_action :authenticate_user!
   before_action :set_passed_test, only: %i[show update result gist]
 
-  def show
+  def show;end
 
-  end
-
-  def result
-
-  end
+  def result;end
 
   def update
     @passed_test.accept!(params[:answer_ids])

@@ -84,6 +84,25 @@ en:
     new:
       header: "Feedback form"
 
+  badges:
+    user_badges:
+      header: "Your Badges"
+      icon: "Icon"
+      title: "Title"
+      type: "Type"
+      condition: "Condition"
+      no_badges: "You don't have any badges"
+      back_to_all: "Back to all"
+    index:
+      header: "Badges"
+      icon: "Icon"
+      title: "Title"
+      type: "Type"
+      condition: "Condition"
+      actions: "Actions"
+      no_badges: "You don't have any badges"
+      show_users_badges: "Show your badges"
+
   admin:
     tests:
       new:
@@ -124,6 +143,7 @@ en:
       title: "Test Guru Admin Panel"
       gists: "Gists"
       tests: "Tests"
+      badges: "Badges"
       logout: "Logout"
     gists:
       index:

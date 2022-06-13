@@ -55,6 +55,25 @@ ru:
     new:
       header: "Форма обратной связи"
 
+  badges:
+    user_badges:
+      header: "Ваши бэйджи"
+      icon: "Иконка"
+      title: "Название"
+      type: "Тип"
+      condition: "Условие"
+      no_badges: "Вы еще не заработали бэйджов"
+      back_to_all: "Вернуться ко всем"
+    index:
+      header: "Бэйджи"
+      icon: "Иконка"
+      title: "Название"
+      type: "Тип"
+      condition: "Условие"
+      actions: "Действия"
+      no_badges: "У вас еще нет созданных бейджев"
+      show_users_badges: "Показать ваши бэйджи"
+
   admin:
     tests:
       new:
@@ -95,6 +114,7 @@ ru:
       title: "Панель администратора Test Guru"
       gists: "Gists"
       tests: "Тесты"
+      badges: "Бэйджи"
       logout: "Выйти"
     gists:
       index:
