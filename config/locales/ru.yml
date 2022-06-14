@@ -123,6 +123,20 @@ ru:
         URL: "URL"
         author: "Автор"
         no_gists: "У вас нет созданных gists"
+    badges:
+      form:
+        back_to_badges: "К списку всех бейджев"
+      index:
+        header: "Бэйджи"
+        icon: "Иконка"
+        title: "Название"
+        type: "Тип"
+        condition: "Условие"
+        actions: "Действия"
+        no_badges: "У вас еще нет созданных бейджев"
+        add_new: "Добавить новый"
+      new:
+        header: "Создать новый бэйдж"
 
   tests_mailer:
     completed_test:
