@@ -4,8 +4,7 @@ class PassedTest < ApplicationRecord
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_validation :before_validation_set_first_question, on: :create
-  before_update :before_update_set_next_question
-  before_update :before_update_send_mail
+  before_update :before_update_set_next_question, :before_update_check_success, :before_update_send_mail
 
   SUCCESS_PERCENT = 85
 
@@ -46,6 +45,10 @@ class PassedTest < ApplicationRecord
 
   def before_update_set_next_question
     self.current_question = next_question
+  end
+
+  def before_update_check_success
+    self.success = self.success? if self.completed?
   end
 
   def before_update_send_mail
