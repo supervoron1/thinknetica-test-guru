@@ -13,6 +13,7 @@ class PassedTestController < ApplicationController
     if @passed_test.completed?
       # moved to passed_test model callback
       # TestsMailer.completed_test(@passed_test).deliver_now
+      give_badge if @passed_test.success?
       redirect_to result_passed_test_path(@passed_test)
     else
       render :show
@@ -38,5 +39,11 @@ class PassedTestController < ApplicationController
 
   def set_passed_test
     @passed_test = PassedTest.find(params[:id])
+  end
+
+  def give_badge
+    badges = BadgeService.new(@passed_test).call
+    current_user.badges << badges
+    flash[:notice] = 'You have new badges, check it on badge page' if badges
   end
 end
