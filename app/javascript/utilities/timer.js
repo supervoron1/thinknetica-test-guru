@@ -10,7 +10,9 @@ document.addEventListener('turbolinks:load', () => {
             seconds.textContent = base_seconds -= 1
 
             if (base_seconds <= 0) {
-                window.location.href = window.location.href + '/result'
+                clearInterval(interval)
+                url = window.location
+                window.location.href = url.origin + url.pathname + '/result' + url.search
             }
 
             if (window.location.href !== href) {

@@ -4,7 +4,7 @@
   <% if user_signed_in? %>
     <div class="nav-user user">
       Welcome, <b class="nav-user user-email"><%= current_user.email %></b> Guru |
-      <%= link_to 'MyBadges', user_badges_badges_path %> |
+      <%= link_to 'MyBadges', my_badges_path %> |
       <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
     </div>
   <% end %>

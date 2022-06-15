@@ -37,6 +37,14 @@ class PassedTest < ApplicationRecord
     self.test&.questions
   end
 
+  def time_left
+    (self.created_at + self.test&.timer.minutes - Time.now).round if self.test.timer
+  end
+
+  def time_expired?
+    self.time_left <= 0
+  end
+
   private
 
   def before_validation_set_first_question

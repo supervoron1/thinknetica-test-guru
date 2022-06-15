@@ -41,6 +41,6 @@ Rails.application.routes.draw do
 
   resources :feedbacks, only: %i[new create]
   resources :badges, only: :index do
-    get :user_badges, on: :collection
+    get :my, on: :collection
   end
 end

@@ -2,7 +2,6 @@ class PassedTestController < ApplicationController
 
   before_action :authenticate_user!
   before_action :set_passed_test, only: %i[show update result gist]
-  before_action :set_remaining_time, only: %i[show update]
 
   def show;end
 
@@ -11,10 +10,9 @@ class PassedTestController < ApplicationController
   def update
     @passed_test.accept!(params[:answer_ids])
 
-    if @passed_test.completed? || @remaining_time <= 0
-      # moved to passed_test model callback
-      # TestsMailer.completed_test(@passed_test).deliver_now
-      give_badge if @passed_test.success?
+    if @passed_test.completed? || @passed_test.time_expired?
+      badges = AssignBadgeService.new(@passed_test).call if @passed_test.success?
+      flash[:notice] = 'You have new badges, check it on badge page' unless badges.empty?
       redirect_to result_passed_test_path(@passed_test)
     else
       render :show
@@ -42,13 +40,4 @@ class PassedTestController < ApplicationController
     @passed_test = PassedTest.find(params[:id])
   end
 
-  def set_remaining_time
-    @remaining_time = (@passed_test.created_at + @passed_test.test.timer.minutes - Time.now).round if @passed_test.test.timer
-  end
-
-  def give_badge
-    badges = BadgeService.new(@passed_test).call
-    current_user.badges << badges
-    flash[:notice] = 'You have new badges, check it on badge page' if badges
-  end
 end

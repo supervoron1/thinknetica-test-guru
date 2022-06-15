@@ -56,7 +56,7 @@ ru:
       header: "Форма обратной связи"
 
   badges:
-    user_badges:
+    my:
       header: "Ваши бэйджи"
       icon: "Иконка"
       title: "Название"

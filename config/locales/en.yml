@@ -85,7 +85,7 @@ en:
       header: "Feedback form"
 
   badges:
-    user_badges:
+    my:
       header: "Your Badges"
       icon: "Icon"
       title: "Title"

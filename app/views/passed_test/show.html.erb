@@ -4,7 +4,7 @@
 
 <% if @passed_test.test.timer %>
   <div class="timer">
-    <p>You have <span id='seconds'><%= @remaining_time %></span> seconds left</p>
+    <p>You have <span id='seconds'><%= @passed_test.time_left %></span> seconds left</p>
   </div>
 <% end %>
 
