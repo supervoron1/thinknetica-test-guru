@@ -15,7 +15,7 @@ class AssignBadgeService
 
   def all_categories(category)
     category = Category.find_by_title(category)
-    passed_tests_count = @user.passed_tests.where(test_id: category.test_ids, success: true).count
+    passed_tests_count = @user.passed_tests.where(test_id: category.test_ids, success: true).uniq.count
     passed_tests_count == category.test_ids.count
   end
 
