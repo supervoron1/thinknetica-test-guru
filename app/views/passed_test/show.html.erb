@@ -2,6 +2,12 @@
 
 <h3><%= t('.current_question_is', current: @passed_test.taken_questions + 1, total: @passed_test.test_questions.count) %></h3>
 
+<% if @passed_test.test.timer %>
+  <div class="timer">
+    <p>You have <span id='seconds'><%= @passed_test.time_left %></span> seconds left</p>
+  </div>
+<% end %>
+
 <div class="progress'">
   <%= content_tag :div,
                   class: 'progress-bar progress-bar-striped',

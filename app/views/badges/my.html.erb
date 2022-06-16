@@ -1,0 +1,24 @@
+<h1 class="text-center"><%= t('.header') %></h1>
+
+<% if @badges.present? %>
+  <%= render 'shared/errors', resource: @badge %>
+
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th scope="col" style="text-align: center"><%= t('.icon') %></th>
+      <th scope="col" style="text-align: center"><%= t('.title') %></th>
+      <th scope="col" style="text-align: center"><%= t('.type') %></th>
+      <th scope="col" style="text-align: center"><%= t('.condition') %></th>
+    </tr>
+    </thead>
+    <tbody>
+    <%= render @badges %>
+    </tbody>
+  </table>
+<% else %>
+  <h3><%= t('.no_badges') %></h3>
+<% end %>
+<p>
+  <%= link_to t('.back_to_all'), badges_path %>
+</p>

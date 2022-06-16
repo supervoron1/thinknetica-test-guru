@@ -84,6 +84,25 @@ en:
     new:
       header: "Feedback form"
 
+  badges:
+    my:
+      header: "Your Badges"
+      icon: "Icon"
+      title: "Title"
+      type: "Type"
+      condition: "Condition"
+      no_badges: "You don't have any badges"
+      back_to_all: "Back to all"
+    index:
+      header: "Badges"
+      icon: "Icon"
+      title: "Title"
+      type: "Type"
+      condition: "Condition"
+      actions: "Actions"
+      no_badges: "You don't have any badges"
+      show_users_badges: "Show your badges"
+
   admin:
     tests:
       new:
@@ -124,6 +143,7 @@ en:
       title: "Test Guru Admin Panel"
       gists: "Gists"
       tests: "Tests"
+      badges: "Badges"
       logout: "Logout"
     gists:
       index:
@@ -132,6 +152,20 @@ en:
         URL: "URL"
         author: "Author"
         no_gists: "You don't have any gists"
+    badges:
+      form:
+        back_to_badges: "Back to list of badges"
+      index:
+        header: "Badges"
+        icon: "Icon"
+        title: "Title"
+        type: "Type"
+        condition: "Condition"
+        actions: "Actions"
+        no_badges: "You don't have any badges"
+        add_new: "Add new"
+      new:
+        header: "Create new badge"
 
   tests_mailer:
     completed_test:

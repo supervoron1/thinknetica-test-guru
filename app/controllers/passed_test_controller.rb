@@ -3,20 +3,16 @@ class PassedTestController < ApplicationController
   before_action :authenticate_user!
   before_action :set_passed_test, only: %i[show update result gist]
 
-  def show
+  def show;end
 
-  end
-
-  def result
-
-  end
+  def result;end
 
   def update
     @passed_test.accept!(params[:answer_ids])
 
-    if @passed_test.completed?
-      # moved to passed_test model callback
-      # TestsMailer.completed_test(@passed_test).deliver_now
+    if @passed_test.completed? || @passed_test.time_expired?
+      badges = AssignBadgeService.new(@passed_test).call if @passed_test.success?
+      flash[:notice] = 'You have new badges, check it on badge page' unless badges.empty?
       redirect_to result_passed_test_path(@passed_test)
     else
       render :show
@@ -43,4 +39,5 @@ class PassedTestController < ApplicationController
   def set_passed_test
     @passed_test = PassedTest.find(params[:id])
   end
+
 end

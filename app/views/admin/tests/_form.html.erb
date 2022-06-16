@@ -16,6 +16,11 @@
     <div><%= form.collection_select :category_id, Category.all, :id, :title, options = {:prompt => I18n.t('helpers.select.prompt')}, html_options = {:class => :'form-select'}  %></div>
   </div>
 
+  <div class="mt-1">
+    <div><%= form.label :timer, class: "form-label" %></div>
+    <div><%= form.number_field :timer, id: :test_timer, class: "form-control"%></div>
+  </div>
+
   <!--unnecessarily-->
 <!--  <%#= form.hidden_field :author_id, value: current_user.id %><br>-->
 
